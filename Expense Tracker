@@ -1,0 +1,27 @@
+def add_expense(expenses, name, amount):
+    expenses.append({"name": name, "amount": amount})
+
+def list_expenses(expenses):
+    print("\nExpenses:")
+    for idx, expense in enumerate(expenses, start=1):
+        print(f"{idx}. {expense['name']}: ${expense['amount']}")
+
+if __name__ == "__main__":
+    expenses = []
+    while True:
+        print("\nExpense Tracker")
+        print("1. Add Expense")
+        print("2. List Expenses")
+        print("3. Quit")
+        choice = input("Choose an option: ")
+        if choice == "1":
+            name = input("Enter expense name: ")
+            amount = float(input("Enter expense amount: "))
+            add_expense(expenses, name, amount)
+        elif choice == "2":
+            list_expenses(expenses)
+        elif choice == "3":
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid option.")
