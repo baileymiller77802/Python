@@ -1,0 +1,14 @@
+# Simple GUI application using tkinter
+import tkinter as tk
+
+def create_window():
+    root = tk.Tk()
+    root.title("Simple GUI")
+    label = tk.Label(root, text="Hello, Tkinter!")
+    label.pack(pady=10)
+    button = tk.Button(root, text="Close", command=root.destroy)
+    button.pack(pady=5)
+    root.mainloop()
+
+# Example usage
+# create_window()
